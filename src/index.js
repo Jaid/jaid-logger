@@ -31,7 +31,7 @@ export default name => {
         ...commonRotateFileOptions,
         level: "debug",
         format: format.combine(format.splat(), fileFormat({includeErrors: false})),
-        filename: path.join(logFolder, `${name}_log_%DATE%.txt`),
+        filename: path.join(logFolder, `${name}_debug_%DATE%.txt`),
       }),
       new transports.DailyRotateFile({
         ...commonRotateFileOptions,
