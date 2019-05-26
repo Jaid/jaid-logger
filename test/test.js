@@ -4,6 +4,8 @@ const indexModule = (process.env.MAIN ? path.resolve(process.env.MAIN) : path.jo
 const {default: jaidLogger} = indexModule
 
 it("should run", () => {
-  const result = jaidLogger()
-  expect(result).toBeGreaterThan(1549410770)
+  const logger = jaidLogger(`${_PKG_NAME}-test`)
+  logger.error("123")
+  logger.warn("abc")
+  logger.info("def")
 })
