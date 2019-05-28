@@ -9,7 +9,7 @@ const process = value => {
     if (value.stack) {
       return value.stack
       |> cleanStack(#, {pretty: true})
-      |> #.replace("\n", " -> ")
+      |> #.replace(/[\n\r]\s*/sg, " -> ")
     }
     return String(value)
   }
