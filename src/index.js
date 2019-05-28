@@ -8,6 +8,8 @@ import fsExtra from "fs-extra"
 
 import consoleFormat from "./consoleFormat"
 import fileFormat from "./fileFormat"
+import stringifyConsoleFormat from "./stringifyConsoleFormat"
+import stringifyFileFormat from "./stringifyFileFormat"
 
 const commonRotateFileOptions = {
   datePattern: "YYYY-MM-DD",
@@ -25,18 +27,18 @@ export default name => {
     transports: [
       new transports.Console({
         level: "info",
-        format: format.combine(format.splat(), consoleFormat()),
+        format: format.combine(stringifyConsoleFormat(), format.splat(), consoleFormat()),
       }),
       new transports.DailyRotateFile({
         ...commonRotateFileOptions,
         level: "debug",
-        format: format.combine(format.splat(), fileFormat({includeErrors: false})),
+        format: format.combine(stringifyFileFormat(), format.splat(), fileFormat({includeErrors: false})),
         filename: path.join(logFolder, `${name}_debug_%DATE%.txt`),
       }),
       new transports.DailyRotateFile({
         ...commonRotateFileOptions,
         level: "warn",
-        format: format.combine(format.splat(), fileFormat()),
+        format: format.combine(stringifyFileFormat(), format.splat(), fileFormat()),
         filename: path.join(logFolder, `${name}_error_%DATE%.txt`),
       }),
     ],

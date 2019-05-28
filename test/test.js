@@ -11,8 +11,8 @@ it("should run", () => {
   const dateString = moment().format("YYYY-MM-DD")
   const id = `${_PKG_NAME}-test`
   const logger = jaidLogger(id)
-  logger.error("123")
-  logger.warn("abc")
+  logger.error("Something went wrong: %s", new Error("123"))
+  logger.warn("abc is not %s", "cba")
   logger.info("def")
   const logScopes = ["debug", "error"]
   for (const logScope of logScopes) {
