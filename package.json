@@ -16,7 +16,7 @@
   "devDependencies": {
     "acorn": "^6.1.1",
     "babel-jest": "^24.8.0",
-    "babel-preset-jaid": "6.4.0",
+    "babel-preset-jaid": "6.4.1",
     "eslint": "^5.16.0",
     "eslint-config-jaid": "1.12.1",
     "jest": "^24.8.0",
@@ -24,7 +24,7 @@
     "rimraf": "^2.6.3",
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2",
-    "webpack-config-jaid": "5.2.0"
+    "webpack-config-jaid": "5.5.0"
   },
   "scripts": {
     "clean": "rimraf dist/ test/**/dist/",
