@@ -19,7 +19,8 @@ const commonRotateFileOptions = {
 }
 
 export default name => {
-  const logFolder = path.join(appdataPath(name), "log")
+  const appFolder = appdataPath(name)
+  const logFolder = path.join(appFolder, "log")
   if (!fs.existsSync(logFolder)) {
     fsExtra.mkdirpSync(logFolder)
   }
@@ -43,5 +44,7 @@ export default name => {
       }),
     ],
   })
+  logger.appFolder = appFolder
+  logger.logFolder = logFolder
   return logger
 }
