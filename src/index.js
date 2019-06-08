@@ -1,6 +1,7 @@
 import fs from "fs"
 import path from "path"
 
+import filenamify from "filenamify"
 import {createLogger, format, transports} from "winston"
 import "winston-daily-rotate-file"
 import appdataPath from "appdata-path"
@@ -19,7 +20,8 @@ const commonRotateFileOptions = {
 }
 
 export default name => {
-  const appFolder = appdataPath(name)
+  const normalizedName = filenamify(name, {replacement: ""})
+  const appFolder = appdataPath(normalizedName)
   const logFolder = path.join(appFolder, "log")
   if (!fs.existsSync(logFolder)) {
     fsExtra.mkdirpSync(logFolder)
@@ -34,13 +36,13 @@ export default name => {
         ...commonRotateFileOptions,
         level: "debug",
         format: format.combine(stringifyFileFormat(), format.splat(), fileFormat({includeErrors: false})),
-        filename: path.join(logFolder, `${name}_debug_%DATE%.txt`),
+        filename: path.join(logFolder, `${normalizedName}_debug_%DATE%.txt`),
       }),
       new transports.DailyRotateFile({
         ...commonRotateFileOptions,
         level: "warn",
         format: format.combine(stringifyFileFormat(), format.splat(), fileFormat()),
-        filename: path.join(logFolder, `${name}_error_%DATE%.txt`),
+        filename: path.join(logFolder, `${normalizedName}_error_%DATE%.txt`),
       }),
     ],
   })

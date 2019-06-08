@@ -8,6 +8,7 @@
     "chalk": "^2.4.2",
     "clean-stack": "^2.1.0",
     "figures": "^3.0.0",
+    "filenamify": "^4.1.0",
     "fs-extra": "^8.0.1",
     "moment": "^2.24.0",
     "purdy": "^3.5.1",
