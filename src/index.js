@@ -1,10 +1,9 @@
 import fs from "fs"
 import path from "path"
 
-import filenamify from "filenamify"
+import {isArray} from "lodash"
 import {createLogger, format, transports} from "winston"
 import "winston-daily-rotate-file"
-import appdataPath from "appdata-path"
 import fsExtra from "fs-extra"
 
 import consoleFormat from "./consoleFormat"
@@ -20,9 +19,11 @@ const commonRotateFileOptions = {
 }
 
 export default name => {
-  const normalizedName = filenamify(name, {replacement: ""})
-  const appFolder = appdataPath(normalizedName)
-  const logFolder = path.join(appFolder, "log")
+  if (!isArray(name)) {
+    name = [name]
+  }
+  const configFolder = appFolder(...name)
+  const logFolder = path.join(configFolder, "log")
   if (!fs.existsSync(logFolder)) {
     fsExtra.mkdirpSync(logFolder)
   }
@@ -46,7 +47,7 @@ export default name => {
       }),
     ],
   })
-  logger.appFolder = appFolder
+  logger.appFolder = configFolder
   logger.logFolder = logFolder
   return logger
 }
