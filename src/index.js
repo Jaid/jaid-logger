@@ -1,10 +1,11 @@
 import fs from "fs"
 import path from "path"
 
-import {isArray} from "lodash"
+import {isArray, camelCase} from "lodash"
 import {createLogger, format, transports} from "winston"
 import "winston-daily-rotate-file"
 import fsExtra from "fs-extra"
+import appFolder from "app-folder"
 
 import consoleFormat from "./consoleFormat"
 import fileFormat from "./fileFormat"
@@ -22,6 +23,7 @@ export default name => {
   if (!isArray(name)) {
     name = [name]
   }
+  const normalizedName = camelCase(name.join(" "))
   const configFolder = appFolder(...name)
   const logFolder = path.join(configFolder, "log")
   if (!fs.existsSync(logFolder)) {
