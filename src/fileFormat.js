@@ -11,6 +11,6 @@ export default format((info, {includeErrors = true}) => {
   if (!info.message) {
     return
   }
-  info[MESSAGE] = `[${dateString} ${levelString}] ${info.message.trim()}`
+  info[MESSAGE] = `[${dateString} ${levelString}] ${String(info.message).trim()}`
   return info
 })
