@@ -22,7 +22,7 @@ it("should run", async () => {
   for (const logScope of logScopes) {
     const logFile = path.join(logger.logFolder, `${normalizedName}_${logScope}_${dateString}.txt`)
     logger.info("%s log file: %s", logScope, logFile)
-    await delay(3000) // Needed because logger.info is aync and we have to wait for the logFile to get created and written
+    await delay(3000) // Needed because logger.info is async and we have to wait for the logFile to get created and written
     expect(fs.existsSync(logFile)).toBeTruthy()
     const content = fs.readFileSync(logFile, "utf8")
     expect(content.length).toBeGreaterThan(5)

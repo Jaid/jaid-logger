@@ -1,3 +1,5 @@
+/** @module jaid-logger */
+
 import fs from "fs"
 import path from "path"
 
@@ -19,6 +21,21 @@ const commonRotateFileOptions = {
   maxFiles: "14d",
 }
 
+/**
+ * @typedef {Object} JaidLogger
+ * @prop {string} appFolder
+ * @prop {string} logFolder
+ * @prop {Function} log
+ * @prop {Function} info
+ * @prop {Function} warn
+ * @prop {Function} error
+ * @prop {Function} debug
+ */
+
+/**
+ * @param {string|string[]} name App name
+ * @return {JaidLogger}
+ */
 export default name => {
   if (!isArray(name)) {
     name = [name]
