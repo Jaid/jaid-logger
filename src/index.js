@@ -49,7 +49,7 @@ export default name => {
   const logger = createLogger({
     transports: [
       new transports.Console({
-        level: "info",
+        level: process.env.JAID_LOGGER_LEVEL?.toLowerCase() || "info",
         format: format.combine(stringifyConsoleFormat(), format.splat(), consoleFormat()),
       }),
       new transports.DailyRotateFile({
