@@ -7,7 +7,7 @@
     "@babel/runtime": "^7.5.5",
     "app-folder": "^1.0.0",
     "chalk": "^2.4.2",
-    "clean-stack": "^2.1.0",
+    "clean-stack": "^2.2.0",
     "figures": "^3.0.0",
     "fs-extra": "^8.1.0",
     "lodash": "^4.17.15",
@@ -18,17 +18,17 @@
     "winston-daily-rotate-file": "^3.10.0"
   },
   "devDependencies": {
-    "acorn": "^6.2.1",
-    "babel-jest": "^24.8.0",
-    "babel-preset-jaid": "6.8.2",
-    "browserslist-config-jaid-node": "^2.2.1",
+    "acorn": "^7.0.0",
+    "babel-jest": "^24.9.0",
+    "babel-preset-jaid": "6.9.1",
+    "browserslist-config-jaid-node": "^2.2.2",
     "delay": "^4.3.0",
-    "eslint": "^6.1.0",
-    "eslint-config-jaid": "1.26.0",
-    "jest": "^24.8.0",
-    "rimraf": "^2.6.3",
-    "webpack": "^4.38.0",
-    "webpack-config-jaid": "5.23.0"
+    "eslint": "^6.3.0",
+    "eslint-config-jaid": "1.28.2",
+    "jest": "^24.9.0",
+    "rimraf": "^3.0.0",
+    "webpack": "^4.39.3",
+    "webpack-config-jaid": "5.27.3"
   },
   "scripts": {
     "clean": "rimraf dist/",
