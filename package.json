@@ -42,5 +42,6 @@
     "test:debug": "DEBUG=\"$(basename $PWD),$(basename $PWD):*\" NODE_ENV=test node --inspect=9229 node_modules/jest/bin/jest.js --runInBand",
     "prepareActionJest": "npm run build:prod"
   },
-  "name": "jaid-logger"
+  "name": "jaid-logger",
+  "description": "Creates an opinionated Winston logger with advanced file system output."
 }
