@@ -3,6 +3,15 @@
 
 Creates an opinionated Winston logger with advanced file system output.
 
+## Installation
+<a href='https://npmjs.com/package/jaid-logger'><img alt='npm logo' src='https://raw.githubusercontent.com/npm/logos/master/npm%20logo/npm-logo-red.png' height=16/></a>
+```bash
+npm install --save jaid-logger@^
+```
+<a href='https://yarnpkg.com/package/jaid-logger'><img alt='Yarn logo' src='https://raw.githubusercontent.com/yarnpkg/assets/master/yarn-kitten-full.png' height=24/></a>
+```bash
+yarn add jaid-logger@^
+```
 
 
 ## Try it out
