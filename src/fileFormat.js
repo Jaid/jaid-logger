@@ -12,6 +12,7 @@ export default format((info, {includeErrors = true}) => {
   if (!info.message) {
     return
   }
-  info[MESSAGE] = `[${dateString} ${levelString}] ${String(info.message).trim()}`
+  const cleanedMessage = stripAnsi(String(info.message).trim())
+  info[MESSAGE] = `[${dateString} ${levelString}] ${cleanedMessage}`
   return info
 })
