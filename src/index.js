@@ -3,9 +3,9 @@
 import "winston-daily-rotate-file"
 
 import appFolder from "app-folder"
+import ensureArray from "ensure-array"
 import fs from "fs"
 import fsExtra from "fs-extra"
-import {camelCase, isArray} from "lodash"
 import path from "path"
 import {createLogger, format, transports} from "winston"
 
@@ -37,11 +37,7 @@ const commonRotateFileOptions = {
  * @return {JaidLogger}
  */
 export default name => {
-  if (!isArray(name)) {
-    name = [name]
-  }
-  const normalizedName = camelCase(name.join(" "))
-  const configFolder = appFolder(...name)
+  const configFolder = appFolder(...ensureArray(name))
   const logFolder = path.join(configFolder, "log")
   if (!fs.existsSync(logFolder)) {
     fsExtra.mkdirpSync(logFolder)
@@ -56,13 +52,13 @@ export default name => {
         ...commonRotateFileOptions,
         level: "debug",
         format: format.combine(stringifyFileFormat(), format.splat(), fileFormat({includeErrors: false})),
-        filename: path.join(logFolder, `${normalizedName}_debug_%DATE%.txt`),
+        filename: path.join(logFolder, "debug", "%DATE%.txt"),
       }),
       new transports.DailyRotateFile({
         ...commonRotateFileOptions,
         level: "warn",
         format: format.combine(stringifyFileFormat(), format.splat(), fileFormat()),
-        filename: path.join(logFolder, `${normalizedName}_error_%DATE%.txt`),
+        filename: path.join(logFolder, "error", "%DATE%.txt"),
       }),
     ],
   })
