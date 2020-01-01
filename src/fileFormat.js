@@ -1,6 +1,7 @@
-import {format} from "winston"
-import {MESSAGE} from "triple-beam"
 import moment from "moment"
+import stripAnsi from "strip-ansi"
+import {MESSAGE} from "triple-beam"
+import {format} from "winston"
 
 export default format((info, {includeErrors = true}) => {
   if (!includeErrors && (info.level === "warn" || info.level === "error")) {

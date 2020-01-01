@@ -1,9 +1,8 @@
-import path from "path"
+import delay from "delay"
 import fs from "fs"
-
 import {camelCase} from "lodash"
 import moment from "moment"
-import delay from "delay"
+import path from "path"
 
 const indexModule = (process.env.MAIN ? path.resolve(process.env.MAIN) : path.join(__dirname, "..", "src")) |> require
 const {default: jaidLogger} = indexModule

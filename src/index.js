@@ -1,13 +1,13 @@
 /** @module jaid-logger */
 
-import fs from "fs"
-import path from "path"
-
-import {isArray, camelCase} from "lodash"
-import {createLogger, format, transports} from "winston"
 import "winston-daily-rotate-file"
-import fsExtra from "fs-extra"
+
 import appFolder from "app-folder"
+import fs from "fs"
+import fsExtra from "fs-extra"
+import {camelCase, isArray} from "lodash"
+import path from "path"
+import {createLogger, format, transports} from "winston"
 
 import consoleFormat from "./consoleFormat"
 import fileFormat from "./fileFormat"

@@ -1,7 +1,7 @@
-import {format} from "winston"
-import {MESSAGE} from "triple-beam"
-import figures from "figures"
 import chalk from "chalk"
+import figures from "figures"
+import {MESSAGE} from "triple-beam"
+import {format} from "winston"
 
 const withPrefix = (level, message) => {
   if (level === "info") {
