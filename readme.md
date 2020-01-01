@@ -3,15 +3,32 @@
 
 Creates an opinionated Winston logger with advanced file system output.
 
+<a href="https://raw.githubusercontent.com/Jaid/jaid-logger/master/license.txt"><img src="https://img.shields.io/github/license/Jaid/jaid-logger?style=flat-square&color=success" alt="License"/></a>  
+<a href="https://github.com/Jaid/jaid-logger/commits"><img src="https://img.shields.io/github/commits-since/Jaid/jaid-logger/v1.5.3?style=flat-square&logo=github&color=success" alt="Commits since v1.5.3"/></a> <a href="https://github.com/Jaid/jaid-logger/commits"><img src="https://img.shields.io/github/last-commit/Jaid/jaid-logger?style=flat-square&logo=github&color=red" alt="Last commit"/></a> <a href="https://github.com/Jaid/jaid-logger/issues"><img src="https://img.shields.io/github/issues/Jaid/jaid-logger?style=flat-square&logo=github&color=red" alt="Issues"/></a>  
+<a href="https://npmjs.com/package/jaid-logger"><img src="https://img.shields.io/npm/v/jaid-logger?style=flat-square&logo=npm&label=latest%20version&color=success" alt="Latest version on npm"/></a> <a href="https://github.com/Jaid/jaid-logger/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/jaid-logger?style=flat-square&logo=npm&color=red" alt="Dependents"/></a> <a href="https://npmjs.com/package/jaid-logger"><img src="https://img.shields.io/npm/dm/jaid-logger?style=flat-square&logo=npm&color=red" alt="Downloads"/></a>
+
+
+
+
+
+
+
+
+
 ## Installation
-<a href='https://npmjs.com/package/jaid-logger'><img alt='npm logo' src='https://github.com/Jaid/action-readme/raw/master/images/base-assets/npm.png'/></a>
+<a href="https://npmjs.com/package/jaid-logger"><img src="https://img.shields.io/badge/npm-jaid--logger-C23039?style=flat-square&logo=npm" alt="jaid-logger on npm"/></a>
 ```bash
 npm install --save jaid-logger@^1.5.3
 ```
-<a href='https://yarnpkg.com/package/jaid-logger'><img alt='Yarn logo' src='https://github.com/Jaid/action-readme/raw/master/images/base-assets/yarn.png'/></a>
+<a href="https://yarnpkg.com/package/jaid-logger"><img src="https://img.shields.io/badge/Yarn-jaid--logger-2F8CB7?style=flat-square&logo=yarn&logoColor=white" alt="jaid-logger on Yarn"/></a>
 ```bash
 yarn add jaid-logger@^1.5.3
 ```
+
+
+
+
+
 
 
 
