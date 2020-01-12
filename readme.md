@@ -1,11 +1,17 @@
 # jaid-logger
 
 
-Creates an opinionated Winston logger with advanced file system output.
+<a href="https://raw.githubusercontent.com/Jaid/jaid-logger/master/license.txt"><img src="https://img.shields.io/github/license/Jaid/jaid-logger?style=flat-square" alt="License"/></a>  
+<a href="https://actions-badge.atrox.dev/Jaid/jaid-logger/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2FJaid%2Fjaid-logger%2Fbadge" alt="Build status"/></a> <a href="https://github.com/Jaid/jaid-logger/commits"><img src="https://img.shields.io/github/commits-since/Jaid/jaid-logger/v2.0.0?style=flat-square&logo=github" alt="Commits since v2.0.0"/></a> <a href="https://github.com/Jaid/jaid-logger/commits"><img src="https://img.shields.io/github/last-commit/Jaid/jaid-logger?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/Jaid/jaid-logger/issues"><img src="https://img.shields.io/github/issues/Jaid/jaid-logger?style=flat-square&logo=github" alt="Issues"/></a>  
+<a href="https://npmjs.com/package/jaid-logger"><img src="https://img.shields.io/npm/v/jaid-logger?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/Jaid/jaid-logger/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/jaid-logger?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/jaid-logger"><img src="https://img.shields.io/npm/dm/jaid-logger?style=flat-square&logo=npm" alt="Downloads"/></a>
 
-<a href="https://raw.githubusercontent.com/Jaid/jaid-logger/master/license.txt"><img src="https://img.shields.io/github/license/Jaid/jaid-logger?style=flat-square&color=success" alt="License"/></a>  
-<a href="https://github.com/Jaid/jaid-logger/commits"><img src="https://img.shields.io/github/commits-since/Jaid/jaid-logger/v2.0.0?style=flat-square&logo=github&color=success" alt="Commits since v2.0.0"/></a> <a href="https://github.com/Jaid/jaid-logger/commits"><img src="https://img.shields.io/github/last-commit/Jaid/jaid-logger?style=flat-square&logo=github&color=red" alt="Last commit"/></a> <a href="https://github.com/Jaid/jaid-logger/issues"><img src="https://img.shields.io/github/issues/Jaid/jaid-logger?style=flat-square&logo=github&color=red" alt="Issues"/></a>  
-<a href="https://npmjs.com/package/jaid-logger"><img src="https://img.shields.io/npm/v/jaid-logger?style=flat-square&logo=npm&label=latest%20version&color=success" alt="Latest version on npm"/></a> <a href="https://github.com/Jaid/jaid-logger/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/jaid-logger?style=flat-square&logo=npm&color=red" alt="Dependents"/></a> <a href="https://npmjs.com/package/jaid-logger"><img src="https://img.shields.io/npm/dm/jaid-logger?style=flat-square&logo=npm&color=red" alt="Downloads"/></a>
+**Creates an opinionated Winston logger with advanced file system output.**
+
+
+
+
+
+
 
 
 
@@ -32,12 +38,31 @@ yarn add jaid-logger@^2.0.0
 
 
 
+## Development
+
+
+
+Setting up:
+```bash
+git clone git@github.com:Jaid/jaid-logger.git
+cd jaid-logger
+npm install
+```
+Testing:
+```bash
+npm run test:dev
+```
+Testing in production environment:
+```bash
+npm run test
+```
+
 
 ## License
 ```text
 MIT License
 
-Copyright © 2019, Jaid <jaid.jsx@gmail.com> (github.com/jaid)
+Copyright © 2020, Jaid <jaid.jsx@gmail.com> (github.com/jaid)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
