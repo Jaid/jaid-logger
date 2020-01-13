@@ -46,5 +46,6 @@
     "prepareActionJest": "npm run build:prod"
   },
   "name": "jaid-logger",
-  "description": "Creates an opinionated Winston logger with advanced file system output."
+  "description": "Creates an opinionated Winston logger with advanced file system output.",
+  "funding": "https://github.com/sponsors/jaid"
 }
