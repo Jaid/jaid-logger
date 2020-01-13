@@ -47,5 +47,9 @@
   },
   "name": "jaid-logger",
   "description": "Creates an opinionated Winston logger with advanced file system output.",
-  "funding": "https://github.com/sponsors/jaid"
+  "funding": "https://github.com/sponsors/jaid",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaid/jaid-logger"
+  }
 }
