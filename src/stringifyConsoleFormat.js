@@ -1,19 +1,18 @@
-import {format} from "winston"
-import {SPLAT} from "triple-beam"
 import cleanStack from "clean-stack"
-import purdy from "purdy"
 import {isObject} from "lodash"
+import purdy from "purdy"
+import {SPLAT} from "triple-beam"
+import {format} from "winston"
 
 const formatValue = value => {
   if (value instanceof Error) {
     if (value.stack) {
-      return value.stack
-      |> cleanStack(#, {pretty: true})
-      |> #.replace(/[\n\r]\s*/sg, " -> ")
+      const cleanedStack = cleanStack(value.stack, {pretty: true})
+      return cleanedStack
     }
     return String(value)
   }
-  if (value |> isObject) {
+  if (isObject(value)) {
     return purdy.stringify(value, {
       indent: 2,
     })

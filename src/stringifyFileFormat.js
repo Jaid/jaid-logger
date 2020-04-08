@@ -1,12 +1,12 @@
-import {format} from "winston"
-import {SPLAT} from "triple-beam"
 import cleanStack from "clean-stack"
+import {SPLAT} from "triple-beam"
+import {format} from "winston"
 
 const process = value => {
   if (value instanceof Error) {
     if (value.stack) {
-      return value.stack
-      |> cleanStack(#, {pretty: true})
+      const cleanedStack = cleanStack(value.stack, {pretty: true})
+      return cleanedStack
     }
     return String(value)
   }
