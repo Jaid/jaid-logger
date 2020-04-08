@@ -14,7 +14,7 @@ const process = value => {
     return String(value)
   }
   if (value |> isObject) {
-    return purdy(value, {
+    return purdy.stringify(value, {
       indent: 2,
     })
   }
