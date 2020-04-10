@@ -10,6 +10,7 @@ import path from "path"
 import {createLogger, format, transports} from "winston"
 
 import consoleFormat from "./consoleFormat"
+import errorFormat from "./errorFormat"
 import fileFormat from "./fileFormat"
 import stringifyConsoleFormat from "./stringifyConsoleFormat"
 import stringifyFileFormat from "./stringifyFileFormat"
@@ -43,6 +44,7 @@ export default name => {
     fsExtra.mkdirpSync(logFolder)
   }
   const logger = createLogger({
+    format: errorFormat(),
     transports: [
       new transports.Console({
         level: process.env.JAID_LOGGER_LEVEL?.toLowerCase() || "info",

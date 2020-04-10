@@ -14,6 +14,7 @@ it("should run", async () => {
   expect(logger.appFolder.endsWith(name)).toBeTruthy()
   expect(logger.logFolder.endsWith("log")).toBeTruthy()
   logger.error("Something went wrong: %s", new Error("123"))
+  logger.error(new Error("123"))
   logger.warn("abc is not %s", "cba")
   logger.info("def")
   const logScopes = ["debug", "error"]
