@@ -10,7 +10,7 @@ const formatValue = value => {
       const cleanedStack = cleanStack(value.stack, {pretty: true})
       return cleanedStack
     }
-    return String(value)
+    return value
   }
   if (isObject(value)) {
     return purdy.stringify(value, {
