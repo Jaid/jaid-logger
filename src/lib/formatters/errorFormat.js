@@ -1,13 +1,7 @@
-import cleanStack from "clean-stack"
 import {LEVEL, MESSAGE} from "triple-beam"
 import {format} from "winston"
 
-function formatError(error) {
-  if (error.stack) {
-    return cleanStack(error.stack, {pretty: true})
-  }
-  return error
-}
+import formatError from "lib/formatError"
 
 export default format(error => {
   if (!(error instanceof Error)) {

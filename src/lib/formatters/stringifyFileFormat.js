@@ -1,14 +1,11 @@
-import cleanStack from "clean-stack"
 import {SPLAT} from "triple-beam"
 import {format} from "winston"
 
+import formatError from "lib/formatError"
+
 const formatValue = value => {
   if (value instanceof Error) {
-    if (value.stack) {
-      const cleanedStack = cleanStack(value.stack, {pretty: true})
-      return cleanedStack
-    }
-    return value
+    return formatError(value)
   }
   return value
 }

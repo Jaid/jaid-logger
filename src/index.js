@@ -9,11 +9,11 @@ import fsExtra from "fs-extra"
 import path from "path"
 import {createLogger, format, transports} from "winston"
 
-import consoleFormat from "./consoleFormat"
-import errorFormat from "./errorFormat"
-import fileFormat from "./fileFormat"
-import stringifyConsoleFormat from "./stringifyConsoleFormat"
-import stringifyFileFormat from "./stringifyFileFormat"
+import consoleFormat from "lib/formatters/consoleFormat"
+import errorFormat from "lib/formatters/errorFormat"
+import fileFormat from "lib/formatters/fileFormat"
+import stringifyConsoleFormat from "lib/formatters/stringifyConsoleFormat"
+import stringifyFileFormat from "lib/formatters/stringifyFileFormat"
 
 const commonRotateFileOptions = {
   datePattern: "YYYY-MM-DD",
