@@ -52,5 +52,17 @@
     "url": "https://github.com/jaid/jaid-logger"
   },
   "homepage": "https://github.com/Jaid/jaid-logger",
-  "keywords": []
+  "keywords": [
+    "console-log",
+    "jaid-logger",
+    "lib",
+    "library",
+    "log",
+    "logger",
+    "logging",
+    "util",
+    "utility",
+    "winston",
+    "winston-logger"
+  ]
 }
