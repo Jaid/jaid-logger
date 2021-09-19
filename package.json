@@ -64,5 +64,6 @@
     "utility",
     "winston",
     "winston-logger"
-  ]
+  ],
+  "type": "module"
 }
